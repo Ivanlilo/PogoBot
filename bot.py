@@ -267,6 +267,7 @@ def bot(op):
                         pass
                     try:
                         ki.kickoutFromGroup(op.param1,[op.param2])
+                        ki.inviteIntoGroup(op.param1,[op.param2,[op.param3])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -303,8 +304,8 @@ def bot(op):
                     try:
                         kk.kickoutFromGroup(op.param1,[op.param2])
                         kc.kickoutFromGroup(op.param1,[op.param2])
-                        kk.inviteIntoGroup(op.param1,[op.param1,[op.param3])
-                        kc.inviteIntoGroup(op.param1,[op.param1,[op.param3])
+                        kk.inviteIntoGroup(op.param1,[op.param2,[op.param3])
+                        kc.inviteIntoGroup(op.param1,[op.param2,[op.param3])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -340,8 +341,8 @@ def bot(op):
                     try:
                         kc.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
-                        kc.inviteIntoGroup(op.param1,[op.param1,[op.param3])
-                        kk.inviteIntoGroup(op.param1,[op.param1,[op.param3])
+                        kc.inviteIntoGroup(op.param1,[op.param2,[op.param3])
+                        kk.inviteIntoGroup(op.param1,[op.param2,[op.param3])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
@@ -379,8 +380,8 @@ def bot(op):
                     try:
                         cl.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
-                        cl.inviteIntoGroup(op.param1,[op.param1,[op.param3])
-                        kk.inviteIntoGroup(op.param1,[op.param1,[op.param3])
+                        cl.inviteIntoGroup(op.param1,[op.param2,[op.param3])
+                        kk.inviteIntoGroup(op.param1,[op.param2,[op.param3])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
