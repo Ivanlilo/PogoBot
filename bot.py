@@ -3,31 +3,30 @@
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,re,datetime,subprocess,urllib3,os,requests,urllib,goslate,pyowm
+import time,random,sys,json,codecs,threading,glob,re,datetime,subprocess,urllib3,os,requests,urllib
 from bs4 import BeautifulSoup
 from threading import Thread
-from pyowm import OWM
+#from pyowm import OWM
 
 cl = LINETCR.LINE()
-cl.login(token="EmBDgrBFhXJpY7dQzZu8.bfmfUwtccO+1N7EuVwD+Ma.oabpihLvt98qEpaxEnGT4qSW74hTzicNwJckxwLcpE8=")
+cl.login(token="Em91waQIcvXWyMrE8SMc.jB1lTE0oNuMV5aYqlcvM7a.7P/be3Mufcd$
 cl.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="Em6CHjpD7QHn365mI8W3.b151yOadpUwvZ3Q/9r80aW.Y+WFbQfwESXytbkaiuiplEfgEDDPDJsUjPZN05o3m7E=")
+kk.login(token="EmFfB9MKm6K5cWzaHTud.ljW+dg/qfx/S+nua8chOdq.qb6cEnwV35D$
 kk.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="Em8WPZacfeoF9ioyZCHd.UvZQ8iaX1kDhGbAShThZ3q.1EiTKut1Z/eHFNGn899abavIZp5/zxPm6L7+A82m/Q0=")
+ki.login(token="EmpYFvEcoVYxm0yKgG3c.kPCIxd3dx0LAHGGMosEvBa.+cl/ASX02L2$
 ki.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token="Em1nLzLCVz0cQlC9Pt7b.VHH0q0Dhr8pSns5/+RsmgW.Dnfdg/UrkMwX9f8syDlWvDsktEIBNGA0j9YbZzitloU=")
+kc.login(token="EmLO74bVtkpmo1RO0Ln9.lx6iYJ1ZQ3OTRUu4MoLSQq.U4ciUWB81tn$
 kc.loginResult()
 
-print "Login success"
+print "=====Login Berhasil====="
 reload(sys)
 sys.setdefaultencoding('utf-8')
-
 helpMessage =""" 􀜁􀅹Salute􏿿 | Keyboard Member | 􀜁􀅹Salute􏿿
 
 [􀜁􀅹Salute􏿿] Hi  (yah begitulah)
@@ -87,9 +86,9 @@ Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 Bots = [dmid,Amid,Bmid,Cmid]
-admin = ["ube187443474747c3ec352e7efeb48c1b","ub95ceaf08031d4a7478016ac1ed1f3dd","ud18caee2faa4cf85c1dbfc37589ce7d1"]
-staff = ["ube187443474747c3ec352e7efeb48c1b","ub95ceaf08031d4a7478016ac1ed1f3dd","ub95ceaf08031d4a7478016ac1ed1f3dd"]
-adminMID = "ube187443474747c3ec352e7efeb48c1b","ub95ceaf08031d4a7478016ac1ed1f3dd"
+admin = ["u0f020150405fe23cace51efbbe590a76"]
+staff = ["u0f020150405fe23cace51efbbe590a76"]
+adminMID = ["u0f020150405fe23cace51efbbe590a76"]
 wait = {
     'contact':True,
     'autoJoin':True,
@@ -486,7 +485,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "ub95ceaf08031da4a7478016ac1ed1f3dd":
+                if msg.from_ == "u0f020150405fe23cace51efbbe590a76":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -609,10 +608,10 @@ def bot(op):
 #------------------------------- CREATOR ------------------------------------
             elif msg.text.lower() in ["creator","admin"]:
                 msg.contentType = 13
-                adm = 'ube187443474747c3ec352e7efeb48c1b'
+                adm = 'u0f020150405fe23cace51efbbe590a76'
                 msg.contentMetadata = {'mid': adm}
                 cl.sendMessage(msg)
-                cl.sendText(msg.to,"Instagram : @dekaprabowoo\nNama : Aked\nZodiak : Taurus")
+                cl.sendText(msg.to,"Smule : @RikiOktopan\nNama : Riki\nZodiak : Libra")
 #----------------------------------------------------------------------------
 #--------------------------------- GIFT -------------------------------------
             elif msg.text.lower() in ["gift"]:
@@ -1583,4 +1582,4 @@ while True:
     for Op in Ops:
         if (Op.type != OpType.END_OF_OPERATION):
             cl.Poll.rev = max(cl.Poll.rev, Op.revision)
-            bot(Op)
+            bot(Op
